@@ -56,6 +56,8 @@ class App(QMainWindow):
         self.layout.upbutton.released.connect(self.controller.stopSteer)
         self.layout.downbutton.pressed.connect(self.controller.getSteerFunc('down'))
         self.layout.downbutton.released.connect(self.controller.stopSteer)
+        # call "Reset" function when pressing "Reset" button
+        self.layout.resetbutton.pressed.connect(self.controller.center)
         # RECALL PRESETS
         self.layout.preset1.pressed.connect(self.recallPreset('1'))
         self.layout.preset2.pressed.connect(self.recallPreset('2'))
